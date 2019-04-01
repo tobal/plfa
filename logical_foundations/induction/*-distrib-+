@@ -1,0 +1,20 @@
+
+*-distrib-+ : ∀ (m n p : ℕ) → (m + n) * p ≡ m * p + n * p
+*-distrib-+ zero n p =
+  begin
+    (zero + n) * p
+  ≡⟨⟩
+    zero + (n * p)
+  ≡⟨⟩
+    n * p
+  ≡⟨⟩
+    zero + n * p
+  ≡⟨⟩
+    zero * p + n * p
+  ∎
+*-distrib-+ (suc m) n p =
+  begin
+    (suc m + n) * p
+  ≡⟨⟩
+    suc m * p + n * p
+  ∎
