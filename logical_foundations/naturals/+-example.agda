@@ -1,3 +1,8 @@
+open import Data.Nat
+
+data ℕ : Set where
+  zero : ℕ
+  suc  : (n : ℕ) → ℕ
 {-# BUILTIN NATURAL ℕ #-}
 
 _ : 3 + 4 ≡ 7
@@ -15,3 +20,4 @@ _ =
   ≡⟨⟩
     7
   ∎
+
